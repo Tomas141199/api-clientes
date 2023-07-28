@@ -1,5 +1,3 @@
-require("colors");
-
 const mongoose = require("mongoose");
 
 const dbConnect = () => {
@@ -10,8 +8,8 @@ const dbConnect = () => {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     })
-    .then(() => console.log("Connection MongoDB Successfully".bgGreen))
-    .catch(() => console.log("Connection MongoDB Failed").bgRed);
+    .then(() => console.log("Connection MongoDB Successfully"))
+    .catch(() => console.log("Connection MongoDB Failed"));
 };
 
 module.exports = dbConnect;
