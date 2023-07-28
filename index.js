@@ -1,7 +1,8 @@
 const cors = require("cors");
 require("dotenv").config();
 const express = require("express");
-
+const swaggerUI = require("swagger-ui-express");
+const openApiConfiguration = require("./docs/swagger");
 const dbConnectNoSql = require("./config/mongoDb");
 
 const app = express();
@@ -17,6 +18,11 @@ const PORT = process.env.PORT || 4000;
 /**
  * API Documentation
  */
+app.use(
+  "/documentation",
+  swaggerUI.serve,
+  swaggerUI.setup(openApiConfiguration)
+);
 
 /**
  * Invoke routes
