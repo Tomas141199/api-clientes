@@ -31,6 +31,6 @@ app.use("/api", require("./routes"));
 
 app.listen(PORT);
 
-//dbConnectNoSql();
+dbConnectNoSql();
 
 module.exports = app;
