@@ -14,7 +14,6 @@ app.use(express.json());
  * ENV vars
  */
 const PORT = process.env.PORT || 3000;
-const NODE_ENV = process.env.NODE_ENV || "development";
 
 /**
  * API Documentation
@@ -30,7 +29,7 @@ app.use(
  */
 app.use("/api", require("./routes"));
 
-if (NODE_ENV !== "test") app.listen(PORT);
+app.listen(PORT);
 
 dbConnectNoSql();
 
