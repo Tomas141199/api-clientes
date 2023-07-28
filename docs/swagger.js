@@ -2,7 +2,7 @@ const swaggerJsdoc = require("swagger-jsdoc");
 
 /**
  * {
-    url: "https://staging.gigantic-server.com/v1",
+    url: "https://clientes-4zyx.onrender.com/api/",
     description: "Staging server"
  * }
  */
@@ -13,15 +13,12 @@ const swaggerJsdoc = require("swagger-jsdoc");
 const swaggerDefinition = {
   openapi: "3.0.0",
   info: {
-    title: "Documentacion de mi API Curso de Node REST",
+    title: "Documentación sobre la api para la gestion de clientes",
     version: "1.0.1",
   },
   servers: [
     {
-      url: "http://localhost:4000/api",
-    },
-    {
-      url: "",
+      url: "https://clientes-4zyx.onrender.com/api",
     },
   ],
   components: {
