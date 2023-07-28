@@ -19,7 +19,11 @@ const NODE_ENV = process.env.NODE_ENV || "development";
 /**
  * API Documentation
  */
-app.use("/", swaggerUI.serve, swaggerUI.setup(openApiConfiguration));
+app.use(
+  "/documentation",
+  swaggerUI.serve,
+  swaggerUI.setup(openApiConfiguration)
+);
 
 /**
  * Invoke routes
